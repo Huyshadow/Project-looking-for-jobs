@@ -1,10 +1,39 @@
+.nav_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 5rem;
+  top:0;
+}
+h4{
+  font-weight: bold;
+}
+nav{
+  width: 80%;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: center;
+}
+.nav_menu{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+}
 .link {
   text-decoration: none;
   list-style: none;
   color: white;
   font-weight: bold;
 }
-.container{
-  width: 80%;
-  margin: 0 auto;
+.nav_menu .link {
+  font-size: 0.9rem;
+  transition: 400ms ease all;
+}
+.nav_menu .link:hover{
+  color: rgb(70, 177, 70);
 }

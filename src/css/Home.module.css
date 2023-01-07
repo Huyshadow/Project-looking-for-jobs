@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.header{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    gap: 5rem;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    
+    
+}
+.btn{
+  border-radius: 2rem;
+  display: inline-block;
+  background-color: white;
+  color: rgb(52, 163, 52);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: bold;
+  transition: 400ms ease-in-out;
+}
+.btn:hover{
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.header_left p{
+    margin: 1rem 0rem 2.4rem;
+}

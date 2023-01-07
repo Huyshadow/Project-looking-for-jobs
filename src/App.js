@@ -12,18 +12,18 @@ function App() {
     <>
       <BrowserRouter>
         <div className={styles.container}>
-        <div className={styles.navbar}>
+        <div className={styles.nav_container}>
+        <nav className={styles.navbar}>
           <Link to="/" className={styles.link}><h4>HUYLEARN</h4></Link>
           <ul className={styles.nav_menu}>
             <Link to='/about' className={styles.link}>About</Link>
             <Link to='/course' className={styles.link}>Course</Link>
-            <Link to='/contact' className={styles.link}>Contact</Link>
+            <Link to='/contact' className={styles.link}>Contact</Link>   
           </ul>
             <Link to='/login' className={styles.link}>Login</Link>
-          <div>
-            <AiOutlineUnorderedList />
-            <AiOutlineCloseCircle />
-          </div>
+            <AiOutlineUnorderedList style={{display:"none",}} />
+            <AiOutlineCloseCircle  style={{display:"none",}}/>
+        </nav>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
