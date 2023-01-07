@@ -2,4 +2,9 @@
   text-decoration: none;
   list-style: none;
   color: white;
+  font-weight: bold;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
 }
