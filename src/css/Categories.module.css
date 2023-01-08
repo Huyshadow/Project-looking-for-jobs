@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgb(27, 95, 30);
+    height: 100vh;
+}
+.categories{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    gap: 5rem;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    
+    
+}

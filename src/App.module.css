@@ -5,12 +5,14 @@
   position: fixed;
   height: 5rem;
   top:0;
+  z-index: 11;
 }
 h4{
   font-weight: bold;
 }
 nav{
   width: 80%;
+ 
 }
 .navbar{
   display: flex;
