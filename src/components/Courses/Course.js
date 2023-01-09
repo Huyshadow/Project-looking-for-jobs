@@ -7,10 +7,14 @@ import { GiMagnetMan } from "react-icons/gi";
 import { MdWeb } from "react-icons/md";
 import { BiData } from "react-icons/bi";
 import { GiRadioTower } from "react-icons/gi";
+import { useState } from "react";
 
 const Course = () => {
+  const [activelink, setActiveLink] = useState("");
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+  };
   const handleChange = () => {};
-  function onClickCheck() {}
   return (
     <>
       <section className={styles.container}>
@@ -39,27 +43,45 @@ const Course = () => {
 
             <div className={styles.categories}>
               <ul>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "bl" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("bl")}
+                >
                   <SiHiveBlockchain style={{ marginRight: "10px" }} />
                   Blockchain
                 </li>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "gd" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("gd")}
+                >
                   <MdOutlineGraphicEq style={{ marginRight: "10px" }} />
                   Graphic Design
                 </li>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "ai" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("ai")}
+                >
                   <GiMagnetMan style={{ marginRight: "10px" }} />
                   Ai Development
                 </li>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "wd" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("wd")}
+                >
                   <MdWeb style={{ marginRight: "10px" }} />
                   Web Development
                 </li>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "dt" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("dt")}
+                >
                   <BiData style={{ marginRight: "10px" }} />
                   Data Analysist
                 </li>
-                <li onClick={onClickCheck}>
+                <li
+                  className={activelink === "iot" ? styles.active : ``}
+                  onClick={() => onUpdateActiveLink("iot")}
+                >
                   <GiRadioTower style={{ marginRight: "10px" }} />
                   Internet of thing
                 </li>

@@ -7,10 +7,21 @@
 li {
     list-style: none;
     cursor: pointer;
-    margin: 2rem 0;
-    padding: 5px 0;
+    margin: 1.2rem 0;
+    padding: 10px 4px;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: 200ms ease-in;
+}
+li:hover{
+    background: rgb(21, 97, 21);
+    padding-left: 20px;
+}
+.active{
+    background: rgb(21, 97, 21);
+    padding-left: 20px;
+    border-right: white 2px solid;
+    transition: 0s;
 }
 
 .course{
