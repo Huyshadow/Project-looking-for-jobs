@@ -25,6 +25,7 @@
   border: 1px solid transparent;
   font-weight: bold;
   transition: 400ms ease-in-out;
+  cursor: pointer;
 }
 .btn:hover{
   background: transparent;

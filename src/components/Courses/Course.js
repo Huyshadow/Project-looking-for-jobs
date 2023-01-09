@@ -90,7 +90,7 @@ const Course = () => {
           </div>
           <div className={styles.course_right}>
             <h2>Search Result</h2>
-            <p>...</p>
+            <div className={styles.list_course}></div>
           </div>
         </div>
       </section>
