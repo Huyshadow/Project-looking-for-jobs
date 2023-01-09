@@ -1,8 +1,14 @@
 import React from "react";
 import styles from "../../css/Categories.module.css";
 import Category from "./Category";
+import { useNavigate } from "react-router";
+import Learn3 from "../../public/learn3.svg";
 
 const Categories = () => {
+  const navigate = useNavigate();
+  function navigateToAbout() {
+    navigate("/about");
+  }
   const list = [
     {
       title: "Block Chain",
@@ -46,6 +52,12 @@ const Categories = () => {
               mauris id eros viverra fringilla. Cras eget tempus dolor. Ut
               ultrices in ex sit amet aliquet.
             </p>
+            <button className={styles.btn} onClick={navigateToAbout}>
+              Learn More
+            </button>
+            <div className={styles.logo}>
+              <img src={Learn3} alt="learn3" />
+            </div>
           </div>
           <div className={styles.cate_right}>
             {list.map((ex) => {

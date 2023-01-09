@@ -36,6 +36,29 @@ img{
   display: block;
   object-fit: cover;
 }
+.headeright{
+  display: flex;
+  justify-content: center;
+}
 .header_left p{
     margin: 1rem 0rem 2.4rem;
+}
+.img_ani{
+  animation: imgcheck infinite;
+  animation-duration: 5s;
+  transition: 4s ease-in;
+}
+@keyframes imgcheck {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+h1{
+  font-size: 3rem;
 }

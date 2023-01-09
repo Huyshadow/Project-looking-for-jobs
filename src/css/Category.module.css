@@ -1,0 +1,19 @@
+article{
+    background: rgb(35, 112, 39);
+    padding: 2rem;
+    border-radius: 2.5rem;
+    transition: 300ms ease-in;   
+}
+article:hover{
+    background: rgb(26, 87, 29);
+}
+.signature{
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px white solid;
+}
+h5{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.4rem;
+}

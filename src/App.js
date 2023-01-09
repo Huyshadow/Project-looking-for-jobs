@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 import Home from "./components/Home";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Categories from "./components/Categories/Categories";
 import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
@@ -9,14 +10,36 @@ import Login from "./components/LoginSignin/Login";
 import { AiOutlineUnorderedList, AiOutlineCloseCircle } from "react-icons/ai";
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
     <>
       <BrowserRouter>
         <div className={styles.container}>
-          <div className={styles.nav_container}>
+          <div
+            className={
+              scrolled
+                ? `${styles.nav_container} ${styles.scroll}`
+                : styles.nav_container
+            }
+          >
             <nav className={styles.navbar}>
               <Link to="/" className={styles.link}>
-                <h4>HUYLEARN</h4>
+                <h4>
+                  <span className={styles.logo}>HUY</span>LEARN
+                </h4>
               </Link>
               <ul className={styles.nav_menu}>
                 <Link to="/categories" className={styles.link}>

@@ -24,7 +24,7 @@ const Home = () => {
           </div>
           <div className={styles.headeright}>
             <div className={styles.headeright_img}>
-              <img src={Headeright} alt="Header" />
+              <img src={Headeright} alt="Header" className={styles.img_ani} />
             </div>
           </div>
         </div>
