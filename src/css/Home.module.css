@@ -32,9 +32,9 @@
   border-color: white;
 }
 img{
-  width: 100%;
   display: block;
   object-fit: cover;
+  justify-content: center;
 }
 .headeright{
   display: flex;
@@ -44,6 +44,7 @@ img{
     margin: 1rem 0rem 2.4rem;
 }
 .img_ani{
+  width: 100%;
   animation: imgcheck infinite;
   animation-duration: 5s;
   transition: 4s ease-in;

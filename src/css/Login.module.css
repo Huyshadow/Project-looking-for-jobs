@@ -52,7 +52,7 @@ form .input_field input{
     color:#333;
 }
 
-input_field input::placeholder{
+.input_field input::placeholder{
     color:#aaa;
     font-weight: 200;
 }
