@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
 }
 li {
     list-style: none;
@@ -30,8 +30,7 @@ li:hover{
     grid-template-columns: 20% 80%;
     position: relative;
     gap: 5rem;
-    overflow: hidden;
-    top:8rem;
+    top: 8rem;
     height: 100%;
 }
 form .input_field{
@@ -57,4 +56,37 @@ form .input_field input{
 .input_field input::placeholder{
     color:#aaa;
     font-weight: 200;
+}
+.list_course{
+    padding: 2rem 2rem;
+    background-color: rgba(55, 85, 52,0.5);
+    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+    overflow-y: auto;
+    border-radius: 2rem;
+}
+.logo{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+     margin-top: 20px;
+}
+.img{
+   
+    width: 100%;
+    animation: move1 infinite;
+    animation-duration: 4s;
+}
+@keyframes move1 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }

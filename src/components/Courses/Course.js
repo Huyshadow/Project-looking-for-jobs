@@ -8,8 +8,45 @@ import { MdWeb } from "react-icons/md";
 import { BiData } from "react-icons/bi";
 import { GiRadioTower } from "react-icons/gi";
 import { useState } from "react";
+import Learn4 from "../../public/learn4.svg";
+import CourseDetail from "./Coursedetail";
+import courseImg1 from "../../public/img/react.jpg";
+import courseImg2 from "../../public/img/react.jpg";
+import courseImg3 from "../../public/img/react.jpg";
 
 const Course = () => {
+  const course = [
+    {
+      title: "React",
+      categories: "Web Development",
+      imgUrl: courseImg1,
+    },
+    {
+      title: "NodeJs",
+      categories: "Web Development",
+      imgUrl: courseImg2,
+    },
+    {
+      title: "Rupy",
+      categories: "Ai Development",
+      imgUrl: courseImg3,
+    },
+    {
+      title: "React",
+      categories: "Web Development",
+      imgUrl: courseImg1,
+    },
+    {
+      title: "NodeJs",
+      categories: "Web Development",
+      imgUrl: courseImg2,
+    },
+    {
+      title: "Rupy",
+      categories: "Ai Development",
+      imgUrl: courseImg3,
+    },
+  ];
   const [activelink, setActiveLink] = useState("");
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -87,10 +124,23 @@ const Course = () => {
                 </li>
               </ul>
             </div>
+            <div className={styles.logo}>
+              <img src={Learn4} alt="learn4" className={styles.img} />
+            </div>
           </div>
           <div className={styles.course_right}>
             <h2>Search Result</h2>
-            <div className={styles.list_course}></div>
+            <div className={styles.list_course}>
+              {course.map((item) => {
+                return (
+                  <CourseDetail
+                    title={item.title}
+                    imgUrl={item.imgUrl}
+                    categories={item.categories}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

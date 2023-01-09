@@ -56,7 +56,7 @@ const Categories = () => {
               Learn More
             </button>
             <div className={styles.logo}>
-              <img src={Learn3} alt="learn3" />
+              <img src={Learn3} className={styles.img} alt="learn3" />
             </div>
           </div>
           <div className={styles.cate_right}>

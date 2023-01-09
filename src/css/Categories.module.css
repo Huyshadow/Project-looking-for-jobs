@@ -13,7 +13,7 @@
     justify-content: center;
     margin-top: 1.2rem;
 }
-img{
+.img{
     width: 80%;
     animation: move1 infinite;
     animation-duration: 4s;
