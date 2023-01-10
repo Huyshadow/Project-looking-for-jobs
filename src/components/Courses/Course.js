@@ -81,42 +81,66 @@ const Course = () => {
             <div className={styles.categories}>
               <ul>
                 <li
-                  className={activelink === "bl" ? styles.active : ``}
+                  className={
+                    activelink === "bl"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("bl")}
                 >
                   <SiHiveBlockchain style={{ marginRight: "10px" }} />
                   Blockchain
                 </li>
                 <li
-                  className={activelink === "gd" ? styles.active : ``}
+                  className={
+                    activelink === "gd"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("gd")}
                 >
                   <MdOutlineGraphicEq style={{ marginRight: "10px" }} />
                   Graphic Design
                 </li>
                 <li
-                  className={activelink === "ai" ? styles.active : ``}
+                  className={
+                    activelink === "ai"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("ai")}
                 >
                   <GiMagnetMan style={{ marginRight: "10px" }} />
                   Ai Development
                 </li>
                 <li
-                  className={activelink === "wd" ? styles.active : ``}
+                  className={
+                    activelink === "wd"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("wd")}
                 >
                   <MdWeb style={{ marginRight: "10px" }} />
                   Web Development
                 </li>
                 <li
-                  className={activelink === "dt" ? styles.active : ``}
+                  className={
+                    activelink === "dt"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("dt")}
                 >
                   <BiData style={{ marginRight: "10px" }} />
                   Data Analysist
                 </li>
                 <li
-                  className={activelink === "iot" ? styles.active : ``}
+                  className={
+                    activelink === "iot"
+                      ? `${styles.active} ${styles.li}`
+                      : `${styles.li}`
+                  }
                   onClick={() => onUpdateActiveLink("iot")}
                 >
                   <GiRadioTower style={{ marginRight: "10px" }} />

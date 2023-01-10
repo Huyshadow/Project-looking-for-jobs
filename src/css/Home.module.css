@@ -64,3 +64,38 @@ img{
 h1{
   font-size: 3rem;
 }
+@media only screen and (max-width: 600px) {
+
+  .header_left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    position: relative;
+    top:8rem;
+  }
+
+  @keyframes imgcheck {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+  h1{
+    font-size: 1.6rem;
+    text-align: center;
+  } 
+
+  p{
+    text-align: center;
+  }
+}

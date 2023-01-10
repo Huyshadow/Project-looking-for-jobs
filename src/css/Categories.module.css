@@ -66,3 +66,49 @@
     grid-template-columns: repeat(3,1fr);
     gap: 1.2rem;
 }
+@media only screen and (max-width:1300px) {
+
+    .categories{
+    width: 80%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 4rem;
+    top: 10rem;
+    height: 60vh;   
+    }
+    .cate_right{
+        padding-bottom: 8rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+
+    .cate_left{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container{
+        height: 90vh;
+    }
+    .categories{
+        top:2rem;
+    }
+    .cate_right{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    @keyframes move1 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+}

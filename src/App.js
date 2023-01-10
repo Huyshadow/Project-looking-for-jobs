@@ -8,9 +8,21 @@ import About from "./components/About/About";
 import Course from "./components/Courses/Course";
 import Login from "./components/LoginSignin/Login";
 import { AiOutlineUnorderedList, AiOutlineCloseCircle } from "react-icons/ai";
+import useWindowDimensions from "./components/useWindowsDimension/useWindowDimension";
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [list, SetList] = useState(true);
+  const { height, width } = useWindowDimensions();
+
+  const dropDown = () => {
+    if (list === false) {
+      SetList(true);
+    } else {
+      SetList(false);
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 0) {
@@ -19,11 +31,13 @@ function App() {
         setScrolled(false);
       }
     };
+    if (width > 900) SetList(true);
+    else SetList(false);
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [width]);
   return (
     <>
       <BrowserRouter>
@@ -41,25 +55,42 @@ function App() {
                   <span className={styles.logo}>HUY</span>LEARN
                 </h4>
               </Link>
-              <ul className={styles.nav_menu}>
-                <Link to="/categories" className={styles.link}>
-                  Categories
-                </Link>
-                <Link to="/about" className={styles.link}>
-                  About
-                </Link>
-                <Link to="/course" className={styles.link}>
-                  Course
-                </Link>
-                <Link to="/contact" className={styles.link}>
-                  Contact
-                </Link>
-              </ul>
-              <Link to="/login" className={styles.link}>
+              {list && (
+                <ul className={styles.nav_menu}>
+                  <Link to="/categories" className={styles.link}>
+                    <p>Categories</p>
+                  </Link>
+                  <Link to="/about" className={styles.link}>
+                    <p>About</p>
+                  </Link>
+                  <Link to="/course" className={styles.link}>
+                    <p>Course</p>
+                  </Link>
+                  <Link to="/contact" className={styles.link}>
+                    <p>Contact</p>
+                  </Link>
+                  {width <= 900 && (
+                    <Link to="/login" className={`${styles.link}`}>
+                      <p>Login</p>
+                    </Link>
+                  )}
+                </ul>
+              )}
+              <Link to="/login" className={`${styles.link} ${styles.login}`}>
                 Login
               </Link>
-              <AiOutlineUnorderedList style={{ display: "none" }} />
-              <AiOutlineCloseCircle style={{ display: "none" }} />
+              {!list && (
+                <AiOutlineUnorderedList
+                  onClick={() => dropDown()}
+                  className={styles.icon}
+                />
+              )}
+              {list && (
+                <AiOutlineCloseCircle
+                  onClick={() => dropDown()}
+                  className={styles.icon}
+                />
+              )}
             </nav>
           </div>
           <Routes>
