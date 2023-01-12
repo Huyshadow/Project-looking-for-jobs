@@ -79,11 +79,10 @@
     display: flex;
     border-radius: 2rem;
     background-color: white;
+    justify-content: center;
     width: 80%;
     height: 20vh;
     margin: 1rem 0;
-    display: grid;
-    grid-template-columns: 20% 80%;
     padding: 1.4rem 0;
     border: 2px solid rgb(4, 19, 4);
     
@@ -107,7 +106,7 @@
     align-items: center;
 }
 .inputtext_field .icon{
-    width: 25%;
+    width: 100%;
 
 }
 .btn{
@@ -170,7 +169,7 @@
     }
 }
 .inputtext_field .icon{
-    width: 70%;
+    width: 100%;
 
 }
 }

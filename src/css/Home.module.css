@@ -64,6 +64,60 @@ img{
 h1{
   font-size: 3rem;
 }
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(17, 88, 17);
+}
+.footer_container{
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 13rem;
+  padding: 1.5rem;
+}
+.footer h4{
+  margin-bottom: 0.8rem;
+}
+.footer_1 p {
+  text-align: justify;
+}
+.footer li {
+  list-style: none;
+  margin: 0.6rem 0;
+
+}
+.footer_2 a {
+  text-decoration: none;
+  color: white;
+}
+.linkme{
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  
+  
+
+}
+.linkme li{
+  padding: 1px;
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactme{
+  margin-right: 10px;
+}
+@media only screen and (max-width:1245px){
+  .footer{
+    display: none;
+  }
+}
 @media only screen and (max-width: 750px) {
 
   .header_left{

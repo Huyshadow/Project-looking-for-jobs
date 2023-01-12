@@ -49,9 +49,6 @@ const Feedback = () => {
                 />
               </div>
               <div className={styles.inputtext_field}>
-                <div className={styles.icontext}>
-                  <MdOutlineDescription className={styles.icon} />
-                </div>
                 <textarea
                   type="text"
                   placeholder="Descripion"

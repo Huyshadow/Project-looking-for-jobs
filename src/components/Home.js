@@ -2,6 +2,14 @@ import React from "react";
 import styles from "../css/Home.module.css";
 import { useNavigate } from "react-router";
 import Headeright from "../public/headeright.svg";
+import { Link } from "react-router-dom";
+import {
+  AiOutlinePhone,
+  AiOutlineMail,
+  AiFillInstagram,
+  AiFillLinkedin,
+} from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
 const Home = () => {
   const navigate = useNavigate();
   function Navigatetocourse() {
@@ -29,6 +37,56 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <footer className={styles.footer}>
+        <div className={styles.footer_container}>
+          <div className={styles.footer_1}>
+            <h4>HUYLEARN</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
+              mauris id eros viverra fringilla. Cras eget tempus dolor. Ut
+              ultrices in ex sit amet aliquet.
+            </p>
+          </div>
+          <div className={styles.footer_2}>
+            <h4>Primacy</h4>
+            <ul className={styles.privacy}>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms and Conditions</a>
+              </li>
+              <li>
+                <a href="#">Refund Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.footer_3}>
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <AiOutlinePhone className={styles.contactme} />
+                Number: 0854001109
+              </li>
+              <li>
+                <AiOutlineMail className={styles.contactme} />
+                Email: huy.dang110902@gmail.com
+              </li>
+            </ul>
+            <ul className={styles.linkme}>
+              <li>
+                <AiFillInstagram />
+              </li>
+              <li>
+                <BsFacebook />
+              </li>
+              <li>
+                <AiFillLinkedin />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
