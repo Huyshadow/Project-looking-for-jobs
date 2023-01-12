@@ -98,7 +98,7 @@ function App() {
             <Route path="categories" element={<Categories />} />
             <Route path="about" element={<About />} />
             <Route path="course" element={<Course />} />
-            <Route path="contact" element={<Feedback />} />
+            <Route path="feedback" element={<Feedback />} />
             <Route path="login" element={<Login />} />
           </Routes>
         </div>
