@@ -3,9 +3,9 @@ import Home from "./components/Home";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Categories from "./components/Categories/Categories";
-import Contact from "./components/Contact/Contact";
-import About from "./components/About/About";
 import Course from "./components/Courses/Course";
+import About from "./components/About/About";
+import Feedback from "./components/Feedback/Feedback";
 import Login from "./components/LoginSignin/Login";
 import { AiOutlineUnorderedList, AiOutlineCloseCircle } from "react-icons/ai";
 import useWindowDimensions from "./components/useWindowsDimension/useWindowDimension";
@@ -66,8 +66,8 @@ function App() {
                   <Link to="/course" className={styles.link}>
                     <p>Course</p>
                   </Link>
-                  <Link to="/contact" className={styles.link}>
-                    <p>Contact</p>
+                  <Link to="/feedback" className={styles.link}>
+                    <p>Feedback</p>
                   </Link>
                   {width <= 900 && (
                     <Link to="/login" className={`${styles.link}`}>
@@ -98,7 +98,7 @@ function App() {
             <Route path="categories" element={<Categories />} />
             <Route path="about" element={<About />} />
             <Route path="course" element={<Course />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="contact" element={<Feedback />} />
             <Route path="login" element={<Login />} />
           </Routes>
         </div>

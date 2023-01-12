@@ -4,15 +4,17 @@ import styles from "../../css/Coursedetail.module.css";
 const CourseDetail = ({ title, categories, imgUrl }) => {
   const navigate = useNavigate();
   function navigatetoDetail() {
-    navigate("/course/ele");
+    navigate("/course/:id");
   }
   return (
     <div className={styles.course}>
-      <img src={imgUrl} />
+      <img src={imgUrl} alt={Math.random()} />
       <div className={styles.txtx}>
         <h4>{title}</h4>
         <span>{categories}</span>
-        <button className={styles.btn}>Detail</button>
+        <button className={styles.btn} onClick={navigatetoDetail}>
+          Detail
+        </button>
       </div>
     </div>
   );
