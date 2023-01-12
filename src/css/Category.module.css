@@ -3,9 +3,11 @@ article{
     padding: 2rem;
     border-radius: 2.5rem;
     transition: 300ms ease-in;   
+    box-shadow: -2rem 2rem 5rem rgba(0,0,0,0.4);
 }
 article:hover{
     background: rgb(26, 87, 29);
+    box-shadow: none;
 }
 .signature{
     padding: 10px;

@@ -3,7 +3,6 @@ import { useState } from "react";
 import styles from "../../css/Feedback.module.css";
 import Feedbackimg from "../../public/feedback.svg";
 import { MdOutlineTopic, MdOutlineDescription } from "react-icons/md";
-import { Animated } from "react-animated-css";
 const Feedback = () => {
   const formInitialDetails = {
     topic: "",
@@ -11,8 +10,6 @@ const Feedback = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
-  const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
     setFormDetails({
@@ -33,20 +30,16 @@ const Feedback = () => {
               className={styles.logo}
               alt={Math.random()}
             />
+            <h3>
+              If you have any concerns? Just talk to us! We're always here for
+              you
+            </h3>
           </div>
           <div className={styles.feed_right}>
             <form onSubmit={handleSubmit}>
               <h2> Feedback </h2>
               <div className={styles.input_field}>
-                <MdOutlineTopic
-                  style={{
-                    width: "100%",
-                    marginTop: "20%",
-                    height: "50%",
-                    textAlign: "center",
-                    color: "#acacac",
-                  }}
-                />
+                <MdOutlineTopic className={styles.icon} />
                 <input
                   type="text"
                   placeholder="Topic"
@@ -55,25 +48,21 @@ const Feedback = () => {
                   onChange={(e) => onFormUpdate("topic", e.target.value)}
                 />
               </div>
-              <div className={styles.input_field}>
-                <MdOutlineDescription
-                  style={{
-                    width: "100%",
-                    marginTop: "20%",
-                    height: "50%",
-                    textAlign: "center",
-                    color: "#acacac",
-                  }}
-                />
+              <div className={styles.inputtext_field}>
+                <div className={styles.icontext}>
+                  <MdOutlineDescription className={styles.icon} />
+                </div>
                 <textarea
                   type="text"
-                  placeholder="Topic"
+                  placeholder="Descripion"
                   name="text"
                   id="text"
                   onChange={(e) => onFormUpdate("topic", e.target.value)}
                 />
-                <button type="submit">Send</button>
               </div>
+              <button type="submit" className={styles.btn}>
+                Send
+              </button>
             </form>
           </div>
         </div>
