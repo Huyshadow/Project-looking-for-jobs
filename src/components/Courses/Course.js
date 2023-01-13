@@ -57,26 +57,28 @@ const Course = () => {
       <section className={styles.container}>
         <div className={styles.course}>
           <div className={styles.course_left}>
-            <form>
-              <div className={styles.input_field}>
-                <BsSearch
-                  style={{
-                    width: "100%",
-                    marginTop: "30%",
-                    height: "50%",
-                    textAlign: "center",
-                    color: "#acacac",
-                  }}
-                />
-                <input
-                  type="email"
-                  placeholder="Search"
-                  name="email"
-                  id="email"
-                  onChange={handleChange}
-                />
-              </div>
-            </form>
+            <div>
+              <form>
+                <div className={styles.input_field}>
+                  <BsSearch
+                    style={{
+                      width: "100%",
+                      marginTop: "30%",
+                      height: "50%",
+                      textAlign: "center",
+                      color: "#acacac",
+                    }}
+                  />
+                  <input
+                    type="email"
+                    placeholder="Search"
+                    name="email"
+                    id="email"
+                    onChange={handleChange}
+                  />
+                </div>
+              </form>
+            </div>
 
             <div className={styles.categories}>
               <ul>

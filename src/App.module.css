@@ -73,6 +73,16 @@ nav{
     width: 16rem;
     flex-direction: column;
     gap: 0;
+    animation: movein 400ms;
+  }
+  @keyframes movein {
+    0%{
+      transform: translateX(20px);
+    }
+    100%{
+      transform: translateX(0px)
+    }
+    
   }
   .nav_menu .link {
     width: 100%;
