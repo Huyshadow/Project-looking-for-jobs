@@ -1,6 +1,6 @@
 import React from "react";
 
-const Order = () => {
+const User = () => {
   return <></>;
 };
-export default Order;
+export default User;

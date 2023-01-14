@@ -5,16 +5,98 @@
   gap: 1.8rem;
   grid-template-columns: 14rem auto 30rem;
 }
+a {
+  text-decoration: none;
+}
+.container h1 {
+  font-size: 1.6rem;
+}
 aside {
   height: 100vh;
 }
 aside .top {
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   margin-top: 1.4rem;
 }
 aside .close {
   display: none;
+}
+.text_muted {
+  background: white;
+  padding: 0.7rem 2.2rem;
+  border-radius: 2rem;
+}
+.sidebar {
+  background: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  position: relative;
+  top: 3rem;
+  border-radius: 2rem;
+  padding: 2rem 0rem;
+}
+.sidebar a {
+  margin: 0.7rem 0;
+}
+aside h3 {
+  font-weight: 800;
+  display: inline-block;
+  margin: 0;
+  font-size: 1.2rem;
+}
+aside .sidebar a {
+  display: flex;
+  color: #635c5c;
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 400ms ease;
+}
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 200ms ease;
+}
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 1.8rem;
+  width: 100%;
+}
+.active {
+  background: #dad5d5;
+  color: rgb(10, 116, 10);
+  margin-left: 0;
+  position: relative;
+  left: -2rem;
+  width: 100%;
+}
+
+.active::after {
+  background: #dad5d5;
+  color: rgb(10, 116, 10);
+  margin-left: 0;
+}
+.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: rgb(10, 116, 10);
+}
+
+aside .sidebar a:active span {
+  color: rgb(10, 116, 10);
+  margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover {
+  color: rgb(10, 116, 10);
+}
+aside .sidebar a:hover span {
+  color: rgb(10, 116, 10);
+  margin: 0.4rem;
 }

@@ -15,7 +15,7 @@ import useWindowDimensions from "./components/useWindowsDimension/useWindowDimen
 import General from "./components/Admin/General";
 
 function App() {
-  const [admin, setAdmin] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
   const [scrolled, setScrolled] = useState(false);
   const [list, SetList] = useState(true);
