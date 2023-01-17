@@ -15,7 +15,7 @@ import useWindowDimensions from "./components/useWindowsDimension/useWindowDimen
 import General from "./components/Admin/General";
 
 function App() {
-  const [admin, setAdmin] = useState(false);
+  const [admin, setAdmin] = useState(true);
 
   const [scrolled, setScrolled] = useState(false);
   const [list, SetList] = useState(true);
@@ -27,6 +27,10 @@ function App() {
     } else {
       SetList(false);
     }
+  };
+
+  const logOutAdmin = () => {
+    setAdmin(false);
   };
 
   useEffect(() => {
@@ -110,7 +114,7 @@ function App() {
             </Routes>
           </div>
         )}
-        {admin && <General />}
+        {admin && <General logout={logOutAdmin} />}
       </BrowserRouter>
     </>
   );
