@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "../../../css/Order.module.css";
+import { BsSearch } from "react-icons/bs";
 const Order = () => {
   const UpdateOrder = () => {};
   const DeleteOrder = () => {};
+  const handleChange = () => {};
   return (
     <>
       <div className={styles.container}>
@@ -12,6 +14,27 @@ const Order = () => {
             <i>Last updated 24h ago</i>
           </p>
         </div>
+
+        <form>
+          <div className={styles.input_field}>
+            <BsSearch
+              style={{
+                width: "100%",
+                marginTop: "30%",
+                height: "50%",
+                textAlign: "center",
+                color: "#acacac",
+              }}
+            />
+            <input
+              type="email"
+              placeholder="Search"
+              name="email"
+              id="email"
+              onChange={handleChange}
+            />
+          </div>
+        </form>
         <main>
           <table>
             <thead>
