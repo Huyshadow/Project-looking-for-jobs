@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../../../css/Order.module.css";
 const Order = () => {
+  const UpdateOrder = () => {};
+  const DeleteOrder = () => {};
   return (
     <>
       <div className={styles.container}>
@@ -15,12 +17,11 @@ const Order = () => {
             <thead>
               <tr>
                 <td>OrderID</td>
-                <td>UserID</td>
-                <td>Status</td>
-                <td>Manager ID</td>
-                <td>Warehouse Code</td>
-                <td>Transportation Code</td>
-                <td></td>
+                <td>IsPaid</td>
+                <td>Payment Method</td>
+                <td>Created Date</td>
+                <td>Total Price</td>
+                <td>Setting</td>
               </tr>
             </thead>
             {/*listReport.map((report) => {
